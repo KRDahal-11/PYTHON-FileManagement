@@ -56,6 +56,41 @@ def edit_file(filename):
 
 
 
+def main():
+    while True:
+        print("FIle Management App")
+        print("1: Create a file")
+        print("2: View all file")
+        print("3: Delete a file")
+        print("4: Read a file")
+        print("5: Edit a file")
+        print("6: Exit")
+
+        choice = input ("Enter a choice (1-6): ")
+
+        if choice == '1':
+            filename = input("Enter the name of file you want to create: ")
+            create_file(filename)
+
+        elif choice == '2':
+            view_all_files()
+
+        elif choice == '3':
+            filename = input("Enter the name of file you want to Delete: ")
+            delete_file(filename)
+        elif choice == '4':
+            filename = input("Enter the name of file you want to Read: ")
+            read_file(filename)
+        elif choice == '5':
+            filename = input("Enter the name of file you want to Edit: ")
+            edit_file(filename)
+        elif choice == '6':
+            break
+
+        else:
+            print("invalid value")
+
+main()
 
 
 
