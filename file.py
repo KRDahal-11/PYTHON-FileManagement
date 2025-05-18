@@ -3,6 +3,7 @@ import os
 def create_file(filename):
     try:
         with open(filename, 'x') as f:
+            # x ---> It will create a new file, but if the file already exists, it will raise a FileExistsError
             print(f"File Name {filename}: Created Successfully!")
     except FileExistsError:
         print(f"File Name {filename} already exists!")
